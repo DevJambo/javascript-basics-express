@@ -7,6 +7,7 @@ const {
   firstCharacters,
 } = require('./lib/strings');
 const { add, subtract, multiply, divide, remainder } = require('./lib/numbers');
+const { negate } = require('./lib/booleans');
 
 const app = express();
 
@@ -107,4 +108,10 @@ app.post('/numbers/remainder', (req, res) => {
     res.status(200).json({ result: remainder(a, b) });
   }
 });
+
+app.post('/booleans/negate', (req, res) => {
+  const { value } = req.body;
+  res.status(200).json({ result: negate(value) });
+});
+
 module.exports = app;
