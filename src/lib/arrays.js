@@ -83,10 +83,7 @@ const sumNumbers = numbers => {
 
 const sortByLastLetter = strings => {
   return strings.sort((previous, current) => {
-    return (
-      previous.charCodeAt(previous.length - 1) -
-      current.charCodeAt(current.length - 1)
-    );
+    return previous.charCodeAt(previous.length - 1) - current.charCodeAt(current.length - 1);
   });
 };
 
@@ -105,5 +102,5 @@ module.exports = {
   elementsStartingWithAVowel,
   removeSpaces,
   sumNumbers,
-  sortByLastLetter
+  sortByLastLetter,
 };
